@@ -1,0 +1,130 @@
+<style>
+    .menu{
+        display: flex;
+        width: 100%;
+        background-color: #f8f9fa;
+        position:sticky;
+        top: 60px !important;
+        z-index: 10000;
+    }
+    .filters{
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: auto;;
+        white-space: nowrap;
+    }
+    .filter{
+        text-align: center;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        opacity: 0.8;
+        display: inline-block;
+
+
+    }
+    a{
+        text-decoration: none;
+        color:#222;
+    }
+    .filter:hover{
+        opacity: 1;
+        cursor: pointer;
+
+    }
+    .filter p{
+        font-size: 0.8rem;
+    }
+    .tax-info{
+        display:none;
+    }
+    .tax-toggle{
+
+        border-radius: 1rem;
+        height:3.2rem;
+        padding:1rem;
+    }
+</style>
+<div class="menu ">
+    <div class="filters">
+            <div class="filter">
+                <a href="/listing">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>All</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Rooms">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=City">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Iconic Citys</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Mountains">
+                <div> <form action="/listing" method="get"><i class="fa-solid fa-mountain"></i></div>
+                <p>Mountains</p></form></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Castles">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>Castles</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Pools">
+                <div><i class="fa-solid fa-person-swimming"></i> </div>
+                <p>Amazing Pools</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Camping">
+                <div><i class="fa-solid fa-campground"></i> </div>
+                <p>Camping</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Farms">
+            <div><i class="fa-solid fa-tractor"></i></div>
+                <p>Farms</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Arctic">
+                <div> <i class="fa-solid fa-snowflake"></i> </div>
+                <p>Arctic</p></a>
+            </div>
+            <div class="filter">
+                <a href="/listing/filter?option=Domes">
+                <div><i class="fa-solid fa-igloo"></i></div>
+                    <p>Domes</p></a>
+                </div>
+                <div class="filter">
+                    <a href="/listing/filter?option=Boats">
+                    <div> <i class="fa-solid fa-sailboat"></i> </div>
+                    <p>Boats</p></a>
+            </div>
+     </div>
+            <div class="tax-toggle">
+            <div class="form-check-reverse form-switch" >
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Display Taxes</label>
+              </div>
+            </div>
+        </div>
+
+
+        <script>
+            let taxSwitch=document.getElementById("flexSwitchCheckDefault")
+            taxSwitch.addEventListener("click",()=>{
+                let taxInfo=document.getElementsByClassName("tax-info");
+                for(info of taxInfo){
+                    if(info.style.display !="inline"){
+                    info.style.display="inline"
+                    }else{
+                    info.style.display="none"
+                        
+                    }
+                }
+            })
+
+
+
+        </script>

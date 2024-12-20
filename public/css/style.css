@@ -1,0 +1,162 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+
+
+
+.container{
+    flex:1;
+}
+.navbar{
+    border: none !important;
+    height: 5rem;
+    
+}
+
+.fa-compass{
+    color:red;
+    font-size:2rem 
+}
+.nav-link{
+    color: #222 !important;
+    background-color: white;
+
+}
+
+/* footer */
+
+.f-info-links a{
+    text-decoration: none;
+    color:#222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links,.f-info-social,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.f-info-social i{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+.f-info{
+    text-align: center;
+    height:8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(128, 128, 128, 0.308);
+}
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom:2rem ;
+}
+
+.card-img-top{
+    border-radius: 1rem;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* card styling */
+
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.add-btn{
+    background-color:red !important;
+    border: none !important;
+}
+.edit-btn{
+    background-color:red !important;
+    border: none !important;
+}
+
+/* show-page */
+.show-img{
+    height: 40vh !important; 
+}
+
+.btns{
+    display: flex;
+    justify-content:initial;
+    margin-left: 110px;
+}
+.btns a{
+    background-color: red;
+    border: none;
+    padding:auto;
+}
+
+/* Map */
+#map{
+    height:100px;
+    width:100px,
+}
+
+@media only screen and (max-width: 600px) {
+    .showejs{
+        .listing-card{
+        width:380px;
+        font-size: large;
+
+        margin-left: 12px !important;
+        margin-right: 0% !important;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+        }
+        .card-text{
+            padding-left: 5px !important;
+        }
+        #heading{
+           font-size:25px;
+        margin-left: 20px !important;
+        }
+        .btns{
+        margin-left: 10px !important;
+        font-size: large;
+        }
+        .review{
+            width: 80%;
+            margin-left: 12px !important;
+            padding-left: 30px !important;
+            font-size:20px;
+            #headingReview{
+                font-size :30px; 
+            }
+        }
+        .allreview{
+            width: 80%;
+        }
+    }
+    .editclass ,.newclass,.loginclass,.signupclass{
+        margin: 25px !important;
+        width: 300px !important;
+    }
+}
+  
